@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+          crossorigin="anonymous"
+        ></script>
+    
+        <title>Jennifer's Weather App</title>
+        <meta charset="UTF-8" />
+        <link href="src/styles.css" rel="stylesheet" type="text/css" />
+        <script
+          src="https://kit.fontawesome.com/211b6a9294.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+      </head>
+    
+      <body>
+        <div id="app"></div>
+        <div class="container">
+          <header>
+            <br/>
+            <br/>
+    <h1>LOCAL WEATHER 
+    <br/>
+    <br/>
+    <div class="card">
+      <form>
+        <input id="userCityInput" type="text" placeholder="Enter a City" class="form-control"/>
+        <input type="button" class="btn btn-primary btn-lg button-header" id="searchBtn" value="Search"/>
+        <input type="button" class="btn btn-outline-primary button-header" value="Add City"/>
+        <input type="button" class="btn btn-info" value="♡"/>
+       
+      </form>
+    </div>
+    
+    
+          </header>
+    <br/>
+    <br/>
+          <section>
+            <h1 id="cityInput"> </h1>
+    
+            <div class="body-highlight-content">
+              <div class="row middle-section">
+                <div class="col-1 main-datemf"> 
+                <span id="tday"> </span> <br/>
+                <span id="tdate"> </span> </div>
+
+                <div class="col-2 main-degree" >
+                  <span id="tdegrees"></span>°C</div>
+
+                <div class="col-2">
+                    <i class="fa-solid fa-sun main-emoji" style="color: #bb00ff;"></i>
+                </div>
+                <div class="col-2 main-datemf" ></div>
+                <div class="col-2 weather-details" >
+                  Wind <span id="windSpeed"></span> km/gh
+                </div>
+                <div class="col-3 weather-details" >
+                  Humidity 92%
+                </div>
+              </div>
+    
+              <div class="row middle-section">
+                <div class="col-7" ></div>
+                <div class="col-2 weather-details" >
+                  Visibility 10 km
+                </div>
+                <div class="col-3 weather-details" >
+                  Pressure 977mb
+                </div>
+              </div>
+    
+              <div class="row middle-section-3">
+                <div class="col-4" id="description" >Cloudy</div>
+                <div class="col-8" ></div>
+              </div>
+    
+              <div class="row middle-section-3">
+                <div class="col-4" >
+                  Feels like 
+                  <span id="feelsLike"> </span>
+                  °C
+                </div>
+                <div class="col-8" ></div>
+              </div>
+            </div>
+    
+           <br/>
+           <br/>
+           <br/>
+
+
+            <div class="body-forecast-content">
+            <h5>6 Days Forecast </h5>
+               <div class="row forecast-emoji">
+                <div class="col-2 day1">
+                  <i class="fa-solid fa-cloud-sun" style="color: #bb00ff;"></i></div>
+                <div class="col-2"><span class="day2">
+                  <i class="fa-solid fa-cloud-showers-heavy" style="color: #bb00ff;"></i></div>
+                </span>
+                  <div class="col-2" >
+                  <i class="fa-solid fa-cloud-sun-rain" style="color: #bb00ff;"></i></div>
+                <div class="col-2" >
+                  <i class="fa-solid fa-cloud-rain" style="color: #bb00ff;"></i></div>
+                <div class="col-2" >
+                    <i class="fa-solid fa-cloud-rain" style="color: #bb00ff;"></i></div>
+                <div class="col-2" >
+                    <i class="fa-solid fa-cloud-rain" style="color: #bb00ff;"></i></div>
+                </div>
+    
+              <div class="row forecast-date">
+                <div class="col-2 day1" >24/10</div>
+                <div class="col-2" ><span class="day2">25/10</span></div>
+                <div class="col-2" >26/10</div>
+                <div class="col-2" >27/10</div>
+                <div class="col-2" >28/10</div>
+                <div class="col-2" >29/10</div>
+              </div>
+    
+              <div class="row forecast-temperature">
+                <div class="col-2 day1" >14°</div>
+                <div class="col-2" ><span class="day2">11°</span></div>
+                <div class="col-2" >14°</div>
+                <div class="col-2" >13°</div>
+                <div class="col-2" >13°</div>
+                <div class="col-2" >11°</div>
+              </div>
+            </div>
+            <br/>
+            <br/>
+    
+          </section>
+        </div>
+          <footer>
+            
+          </footer>
+        </div>
+        <script src="src/index.js"></script>
+      </body>
+    </html>
