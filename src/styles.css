@@ -26,3 +26,11 @@ h3 {
   margin: 30px auto;
   width: 150px;
 }
+
+a:hover {
+  color: blueviolet;
+  text-shadow: 2px 2px greenyellow;
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 150ms ease-in-out;
+}
