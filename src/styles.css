@@ -33,4 +33,5 @@ a:hover {
   cursor: pointer;
   transform: scale(1.5);
   transition: all 150ms ease-in-out;
+  text-align:center;
 }
